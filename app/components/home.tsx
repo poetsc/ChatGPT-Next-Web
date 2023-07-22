@@ -166,6 +166,30 @@ export function useLoadData() {
   }, []);
 }
 
+function ICPRecord() {
+  return (
+    <div
+      style={{
+        position: "fixed",
+        bottom: "12px",
+        left: "50%",
+        transform: "translateX(-50%)",
+        fontSize: "16px",
+        color: "black",
+      }}
+    >
+      <a
+        href="https://beian.miit.gov.cn/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ textDecoration: "none", color: "black" }}
+      >
+        粤ICP备18160683号-1
+      </a>
+    </div>
+  );
+}
+
 export function Home() {
   useSwitchTheme();
   useLoadData();
@@ -183,6 +207,7 @@ export function Home() {
     <ErrorBoundary>
       <Router>
         <Screen />
+        <ICPRecord />
       </Router>
     </ErrorBoundary>
   );
